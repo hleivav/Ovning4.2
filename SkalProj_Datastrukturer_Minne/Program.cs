@@ -2,7 +2,7 @@
 
 namespace SkalProj_Datastrukturer_Minne
 {
-    class Program
+    class Program 
     {
         /// <summary>
         /// The main method, vill handle the menues for the program
@@ -32,7 +32,12 @@ namespace SkalProj_Datastrukturer_Minne
                 switch (input)
                 {
                     case '1':
-                        ExamineList();
+                        //ExamineList();
+                        //menu1_examineTheList.ExamineList(); 
+                        List<string> theList = new();
+                        menu1_examineTheList menu1 = new ();
+
+                        menu1.ExamineList(); 
                         break;
                     case '2':
                         ExamineQueue();
@@ -56,75 +61,39 @@ namespace SkalProj_Datastrukturer_Minne
                 }
             }
         }
-        static void ExamineList()
+        public static void AddAName()
         {
-            /*
-             * Loop this method untill the user inputs something to exit to main menue.
-             * Create a switch statement with cases '+' and '-'
-             * '+': Add the rest of the input to the list (The user could write +Adam and "Adam" would be added to the list)
-             * '-': Remove the rest of the input from the list (The user could write -Adam and "Adam" would be removed from the list)
-             * In both cases, look at the count and capacity of the list
-             * As a default case, tell them to use only + or -
-             * Below you can see some inspirational code to begin working.
-            */
-
-            //List<string> theList = new List<string>();
-            //string input = Console.ReadLine();
-            //char nav = input[0];
-            //string value = input.substring(1);
-
-            //switch(nav){...}
-
-            //************************************************
-            while (true)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("***********************ExaminList******************");
-                Console.WriteLine("Skriv tecknet '+' åtföljd av ett namn för att lägga till detta.");
-                Console.WriteLine("Skriv tecknet '-' åtföljd av ett namn för att få bort detta från listan");
-                Console.WriteLine("***********************ExaminList******************");
-                char inputMenu1 = ' ';
-                try
-                {
-                    inputMenu1 = Console.ReadLine()![0]; //Tries to set input to the first char in an input line
-                }
-                catch (IndexOutOfRangeException) //If the input line is empty, we ask the users for some input.
-                {
-                    Console.Clear();
-                    Console.WriteLine("Please enter some input!");
-                }
-                switch (inputMenu1)
-                {
-                    case '+':
-                        AddAName(); 
-                        break;
-                    case '-':
-                        DeleteAName();
-                        break;
-                    case '0':
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Se alltid till att första tecknet är antingen ett '+' eller ett '-' åtföljd av ett namn.");
-                        break;
-                        //******************************************
-                }
-            }
+            
         }
 
-        private static void DeleteAName()
+        public static void DeleteAName()
         {
             throw new NotImplementedException();
         }
+        //static void ExamineList()
+        //{
+        //    /*
+        //     * Loop this method untill the user inputs something to exit to main menue.
+        //     * Create a switch statement with cases '+' and '-'
+        //     * '+': Add the rest of the input to the list (The user could write +Adam and "Adam" would be added to the list)
+        //     * '-': Remove the rest of the input from the list (The user could write -Adam and "Adam" would be removed from the list)
+        //     * In both cases, look at the count and capacity of the list
+        //     * As a default case, tell them to use only + or -
+        //     * Below you can see some inspirational code to begin working.
+        //    */
 
-        private static void AddAName()
-        {
-            throw new NotImplementedException();
-        }
+        //    //List<string> theList = new List<string>();
+        //    //string input = Console.ReadLine();
+        //    //char nav = input[0];
+        //    //string value = input.substring(1);
 
-        /// <summary>
-        /// Examines the datastructure List
-        /// </summary>
+        //    //switch(nav){...}
+
+        //    //************************************************
+            
+        
+
+
 
 
         /// <summary>
