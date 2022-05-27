@@ -32,18 +32,16 @@ namespace SkalProj_Datastrukturer_Minne
                 switch (input)
                 {
                     case '1':
-                        //ExamineList();
-                        //menu1_examineTheList.ExamineList(); 
-                        List<string> theList = new();
                         menu1_examineTheList menu1 = new ();
-
                         menu1.ExamineList(); 
                         break;
                     case '2':
-                        ExamineQueue();
+                        Menu2_examineTheQueue menu2 = new Menu2_examineTheQueue(); 
+                        menu2.TestQueue();
                         break;
                     case '3':
-                        ExamineStack();
+                        Menu3_examineTheStack menu3 = new Menu3_examineTheStack(); 
+                        menu3.ReverseText();
                         break;
                     case '4':
                         CheckParanthesis();
@@ -61,52 +59,15 @@ namespace SkalProj_Datastrukturer_Minne
                 }
             }
         }
-        public static void AddAName()
-        {
-            
-        }
 
-        public static void DeleteAName()
-        {
-            throw new NotImplementedException();
-        }
-        //static void ExamineList()
+        //static void ExamineQueue()
         //{
         //    /*
         //     * Loop this method untill the user inputs something to exit to main menue.
-        //     * Create a switch statement with cases '+' and '-'
-        //     * '+': Add the rest of the input to the list (The user could write +Adam and "Adam" would be added to the list)
-        //     * '-': Remove the rest of the input from the list (The user could write -Adam and "Adam" would be removed from the list)
-        //     * In both cases, look at the count and capacity of the list
-        //     * As a default case, tell them to use only + or -
-        //     * Below you can see some inspirational code to begin working.
+        //     * Create a switch with cases to enqueue items or dequeue items
+        //     * Make sure to look at the queue after Enqueueing and Dequeueing to see how it behaves
         //    */
-
-        //    //List<string> theList = new List<string>();
-        //    //string input = Console.ReadLine();
-        //    //char nav = input[0];
-        //    //string value = input.substring(1);
-
-        //    //switch(nav){...}
-
-        //    //************************************************
-            
-        
-
-
-
-
-        /// <summary>
-        /// Examines the datastructure Queue
-        /// </summary>
-        static void ExamineQueue()
-        {
-            /*
-             * Loop this method untill the user inputs something to exit to main menue.
-             * Create a switch with cases to enqueue items or dequeue items
-             * Make sure to look at the queue after Enqueueing and Dequeueing to see how it behaves
-            */
-        }
+        //}
 
         /// <summary>
         /// Examines the datastructure Stack

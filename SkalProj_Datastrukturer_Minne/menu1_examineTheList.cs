@@ -54,8 +54,7 @@ namespace SkalProj_Datastrukturer_Minne
                     Console.WriteLine("skriv 'E' för att gå tillbaka till huvudmenyn.");
                     Console.WriteLine("***********************ExaminList******************");
                     menu1Input = Console.ReadLine();
-                    menuChoice = menu1Input.Substring(0, 1);
-                Console.WriteLine(menuChoice); 
+                    Console.WriteLine(menu1Input); 
                
                     switch (menuChoice)
                     {
@@ -86,7 +85,7 @@ namespace SkalProj_Datastrukturer_Minne
             }
         }
 
-        /// <summary>
+        /// <summary> 
         /// Examines the datastructure List
         /// </summary>
     }
