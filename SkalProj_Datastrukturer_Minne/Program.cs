@@ -56,10 +56,6 @@ namespace SkalProj_Datastrukturer_Minne
                 }
             }
         }
-
-        /// <summary>
-        /// Examines the datastructure List
-        /// </summary>
         static void ExamineList()
         {
             /*
@@ -78,7 +74,58 @@ namespace SkalProj_Datastrukturer_Minne
             //string value = input.substring(1);
 
             //switch(nav){...}
+
+            //************************************************
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("***********************ExaminList******************");
+                Console.WriteLine("Skriv tecknet '+' åtföljd av ett namn för att lägga till detta.");
+                Console.WriteLine("Skriv tecknet '-' åtföljd av ett namn för att få bort detta från listan");
+                Console.WriteLine("***********************ExaminList******************");
+                char inputMenu1 = ' ';
+                try
+                {
+                    inputMenu1 = Console.ReadLine()![0]; //Tries to set input to the first char in an input line
+                }
+                catch (IndexOutOfRangeException) //If the input line is empty, we ask the users for some input.
+                {
+                    Console.Clear();
+                    Console.WriteLine("Please enter some input!");
+                }
+                switch (inputMenu1)
+                {
+                    case '+':
+                        AddAName(); 
+                        break;
+                    case '-':
+                        DeleteAName();
+                        break;
+                    case '0':
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Se alltid till att första tecknet är antingen ett '+' eller ett '-' åtföljd av ett namn.");
+                        break;
+                        //******************************************
+                }
+            }
         }
+
+        private static void DeleteAName()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void AddAName()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Examines the datastructure List
+        /// </summary>
+
 
         /// <summary>
         /// Examines the datastructure Queue
