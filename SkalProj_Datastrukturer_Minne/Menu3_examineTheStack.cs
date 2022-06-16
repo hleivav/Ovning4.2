@@ -1,4 +1,7 @@
 ﻿using System.Collections;
+// Fråga 1 - Simulera ännu en gång ICA-kön på papper. Denna gång med en stack . Varför är det
+//inte så smart att använda en stack i det här fallet?
+//Svar: Med stack metoden hade de som kommit först i kön hanterats sist.
 
 namespace SkalProj_Datastrukturer_Minne
 {
@@ -10,13 +13,9 @@ namespace SkalProj_Datastrukturer_Minne
         {
             Console.WriteLine("Skriv en textsträng: ");
             string userInput = Console.ReadLine();
-            icaStack.Push(userInput);
-            Console.WriteLine(icaStack.Count);
+            foreach (char c in userInput) icaStack.Push(c.ToString());
+            foreach (string s in icaStack) Console.WriteLine(s);
 
-            //while (icaStack.Count > 0)
-            //{
-                
-            //}
         }
     }
 

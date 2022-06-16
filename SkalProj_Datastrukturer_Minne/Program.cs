@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace SkalProj_Datastrukturer_Minne
-{
+{// hej hej
     class Program 
     {
         /// <summary>
@@ -44,7 +44,8 @@ namespace SkalProj_Datastrukturer_Minne
                         menu3.ReverseText();
                         break;
                     case '4':
-                        CheckParanthesis();
+                        Menu4_checkParenthesis menu4 = new Menu4_checkParenthesis();
+                        menu4.checkParenthesis();
                         break;
                     /*
                      * Extend the menu to include the recursive 
